@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { MantineProvider } from "@mantine/core";
+import { Global, MantineProvider } from "@mantine/core";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -18,9 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           shadows: {
             md: "1px 1px 3px rgba(0, 0, 0, .25)",
             xl: "5px 5px 3px rgba(0, 0, 0, .25)",
-          },
-          headings: {
-            fontFamily: "Space Grotesk, sans serif",
           },
         }}
         withGlobalStyles

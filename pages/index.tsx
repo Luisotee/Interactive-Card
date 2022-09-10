@@ -1,6 +1,7 @@
 import { Grid, Group, Text, Title } from "@mantine/core";
 import type { NextPage } from "next";
 import { CardLayout } from "../components/card-layout";
+import { CardForm } from "../components/layout/card-form";
 import { FrontCard } from "../components/layout/front-card";
 
 const Home: NextPage = () => {
@@ -11,7 +12,9 @@ const Home: NextPage = () => {
           <CardLayout />
         </Grid.Col>
         <Grid.Col span={5}>
-          <h1>OI</h1>
+          <Group position="center" style={{ marginTop: "30vh" }}>
+            <CardForm />
+          </Group>
         </Grid.Col>
       </Grid>
     </>
