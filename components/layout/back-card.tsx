@@ -4,7 +4,7 @@ interface IBackgroundProps {
   src: string;
 }
 
-export const FrontCard = styled.div<IBackgroundProps>`
+export const BackCard = styled.div<IBackgroundProps>`
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-size: contain;
@@ -14,10 +14,9 @@ export const FrontCard = styled.div<IBackgroundProps>`
   height: 245px;
   width: 447px;
 
-  top: 0;
-  left: 0;
-  padding: 1.5rem;
-
-  position: absolute;
+  position: relative;
   z-index: 1;
+
+  top: 283px;
+  left: 93px;
 `;

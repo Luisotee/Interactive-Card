@@ -5,7 +5,7 @@ interface IBackgroundProps {
 }
 
 export const BackgroundGradient = styled.div<IBackgroundProps>`
-  width: 68%;
+  width: 32vw;
   height: 100vh;
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
