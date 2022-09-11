@@ -2,8 +2,8 @@ import { Grid, Group, Text, Title } from "@mantine/core";
 import { useInputState } from "@mantine/hooks";
 import type { NextPage } from "next";
 import { stringify } from "querystring";
-import { CardLayout } from "../components/card-layout";
-import { CardForm } from "../components/card-form";
+import { CardForm } from "../components/card-form/card-form";
+import { Cards } from "../components/card-layout/cards";
 
 const Home: NextPage = () => {
   const [cardName, setCardName] = useInputState("");
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
     <>
       <Grid style={{ maxWidth: "100%", maxHeight: "100vh" }}>
         <Grid.Col span={5}>
-          <CardLayout cardValue={cardValue} />
+          <Cards cardValue={cardValue} />
         </Grid.Col>
         <Grid.Col span={5}>
           <Group

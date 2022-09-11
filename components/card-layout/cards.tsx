@@ -1,16 +1,17 @@
 import { Group, Image, SimpleGrid, Stack, Text } from "@mantine/core";
 import { BackCard } from "./back-card";
-import { BackgroundGradient } from "./layout/background-gradient";
 
 import { FrontCard } from "./front-card";
+
+import { BackgroundGradient } from "./background-gradient";
+import { CardViewProps } from "../../interface";
 import {
   CardPosition,
   CardSmallLetters,
   CardTextPosition,
-} from "../styles/css-components";
-import { CardViewProps } from "../interface";
+} from "../../styles/css-components";
 
-export function CardLayout({ cardValue }: CardViewProps) {
+export function Cards({ cardValue }: CardViewProps) {
   return (
     <Group>
       <BackgroundGradient src="bg-main-desktop.png" />
