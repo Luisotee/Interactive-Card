@@ -11,7 +11,7 @@ export function CardLayout() {
       <BackgroundGradient src="bg-main-desktop.png" />
       <CardPosition>
         <FrontCard src="bg-card-front.png">
-          <Image src="card-logo.svg" alt="card logo" width={80}></Image>
+          <Image src="card-logo.svg" alt="card logo" width={80} />
         </FrontCard>
         <BackCard src="bg-card-back.png"></BackCard>
       </CardPosition>

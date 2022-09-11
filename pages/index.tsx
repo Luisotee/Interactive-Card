@@ -12,7 +12,10 @@ const Home: NextPage = () => {
           <CardLayout />
         </Grid.Col>
         <Grid.Col span={5}>
-          <Group position="center" style={{ marginTop: "30vh" }}>
+          <Group
+            position="center"
+            style={{ marginTop: "30vh", marginLeft: "10vw" }}
+          >
             <CardForm />
           </Group>
         </Grid.Col>
