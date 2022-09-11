@@ -12,6 +12,7 @@ export const CardSmallLetters = styled.div`
   letter-spacing: 0.0625rem;
   font-size: 0.9rem;
   font-weight: 500;
+  color: white;
 `;
 
 export const CardTextPosition = styled.div`
