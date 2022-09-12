@@ -1,6 +1,7 @@
 import {
   Button,
   Group,
+  Input,
   SimpleGrid,
   Stack,
   Text,
@@ -27,46 +28,52 @@ export function CardForm({ cardProps }: any) {
 
   return (
     <Stack>
-      <TextInput
-        label="CARDHOLDER NAME"
-        placeholder="e.g. Jane Appleseed"
-        onChange={card.setCardName}
-        size="lg"
-        error={nameError}
-      />
-
-      <TextInput
-        label="CARDHOLDER NUMBER"
-        placeholder="e.g. 1234 5678 9123 0000"
-        component={InputMask}
-        mask="9999 9999 9999 9999"
-        maskPlaceholder={null}
-        onChange={card.setCardNumber}
-        size="lg"
-        error={numberError}
-      />
+      <Input.Label className="inputLabels">
+        CARDHOLDER NAME
+        <TextInput
+          placeholder="e.g. Jane Appleseed"
+          onChange={card.setCardName}
+          size="lg"
+          error={nameError}
+        />
+      </Input.Label>
+      <Input.Label className="inputLabels">
+        CARDHOLDER NUMBER
+        <TextInput
+          placeholder="e.g. 1234 5678 9123 0000"
+          component={InputMask}
+          mask="9999 9999 9999 9999"
+          maskPlaceholder={null}
+          onChange={card.setCardNumber}
+          size="lg"
+          error={numberError}
+        />
+      </Input.Label>
 
       <SimpleGrid cols={2}>
-        <TextInput
-          label="EXP. DATE (MM/YY)"
-          placeholder="MM/YY"
-          component={InputMask}
-          mask="99/99"
-          onChange={card.setCardDate}
-          size="lg"
-          error={dateError}
-        />
-
-        <TextInput
-          label="CVC"
-          placeholder="e.g. 123"
-          component={InputMask}
-          maskPlaceholder={null}
-          mask="999"
-          onChange={card.setCardCVC}
-          size="lg"
-          error={cvcError}
-        />
+        <Input.Label className="inputLabels">
+          EXP. DATE (MM/YY)
+          <TextInput
+            placeholder="MM/YY"
+            component={InputMask}
+            mask="99/99"
+            onChange={card.setCardDate}
+            size="lg"
+            error={dateError}
+          />
+        </Input.Label>
+        <Input.Label className="inputLabels">
+          CVC
+          <TextInput
+            placeholder="e.g. 123"
+            component={InputMask}
+            maskPlaceholder={null}
+            mask="999"
+            onChange={card.setCardCVC}
+            size="lg"
+            error={cvcError}
+          />
+        </Input.Label>
       </SimpleGrid>
       <Button
         mt="md"
