@@ -6,7 +6,6 @@ import { useState } from "react";
 import { CardForm } from "../components/card-form/card-form";
 import { Cards } from "../components/card-layout/cards";
 import React from "react";
-import { CardRating } from "./test";
 import { ThankYou } from "../components/thank-you/thank-you";
 React.useLayoutEffect = React.useEffect;
 

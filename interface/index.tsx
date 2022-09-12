@@ -12,6 +12,5 @@ export interface CardViewProps {
 }
 
 export interface setSentProps {
-  isSent: boolean;
   setSent: React.Dispatch<SetStateAction<boolean>>;
 }

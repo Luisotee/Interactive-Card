@@ -1,7 +1,12 @@
-import { Button, Group, SimpleGrid, Stack, TextInput } from "@mantine/core";
-import { useInputState } from "@mantine/hooks";
+import {
+  Button,
+  Group,
+  SimpleGrid,
+  Stack,
+  Text,
+  TextInput,
+} from "@mantine/core";
 import { useState } from "react";
-import { setSentProps } from "../../interface";
 import { handleSubmit } from "./handle-submit";
 
 const InputMask = require("react-input-mask");
