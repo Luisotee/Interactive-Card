@@ -12,4 +12,15 @@ html, body {
     letter-spacing: 00.0625rem;
 }
 
+.inputForm {
+    width: 385px;
+    margin-top: 0.5rem;
+}
+
+.inputDate {
+    margin-top: 0.5rem;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+}
 

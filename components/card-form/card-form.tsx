@@ -1,5 +1,6 @@
 import {
   Button,
+  Grid,
   Group,
   Input,
   SimpleGrid,
@@ -27,19 +28,22 @@ export function CardForm({ cardProps }: any) {
   };
 
   return (
-    <Stack>
+    <Group spacing="xl">
       <Input.Label className="inputLabels">
         CARDHOLDER NAME
         <TextInput
+          className="inputForm"
           placeholder="e.g. Jane Appleseed"
           onChange={card.setCardName}
           size="lg"
           error={nameError}
+          radius="md"
         />
       </Input.Label>
       <Input.Label className="inputLabels">
         CARDHOLDER NUMBER
         <TextInput
+          className="inputForm"
           placeholder="e.g. 1234 5678 9123 0000"
           component={InputMask}
           mask="9999 9999 9999 9999"
@@ -47,20 +51,38 @@ export function CardForm({ cardProps }: any) {
           onChange={card.setCardNumber}
           size="lg"
           error={numberError}
+          radius="md"
         />
       </Input.Label>
-
-      <SimpleGrid cols={2}>
+      <SimpleGrid cols={2} className="inputForm">
         <Input.Label className="inputLabels">
           EXP. DATE (MM/YY)
-          <TextInput
-            placeholder="MM/YY"
-            component={InputMask}
-            mask="99/99"
-            onChange={card.setCardDate}
-            size="lg"
-            error={dateError}
-          />
+          <Grid>
+            <Grid.Col span={1}>
+              <TextInput
+                className="inputDate"
+                placeholder="MM"
+                component={InputMask}
+                mask="99"
+                onChange={card.setCardDate}
+                size="lg"
+                error={dateError}
+                radius="md"
+              />
+            </Grid.Col>
+            <Grid.Col span={1} offset={4.4}>
+              <TextInput
+                className="inputDate"
+                placeholder="YY"
+                component={InputMask}
+                mask="99"
+                onChange={card.setCardDate}
+                size="lg"
+                error={dateError}
+                radius="md"
+              />
+            </Grid.Col>
+          </Grid>
         </Input.Label>
         <Input.Label className="inputLabels">
           CVC
@@ -72,11 +94,12 @@ export function CardForm({ cardProps }: any) {
             onChange={card.setCardCVC}
             size="lg"
             error={cvcError}
+            radius="md"
           />
         </Input.Label>
       </SimpleGrid>
       <Button
-        mt="md"
+        className="inputForm"
         radius="md"
         size="lg"
         style={{ backgroundColor: "hsl(278, 68%, 11%)" }}
@@ -84,6 +107,6 @@ export function CardForm({ cardProps }: any) {
       >
         Confirm
       </Button>
-    </Stack>
+    </Group>
   );
 }
