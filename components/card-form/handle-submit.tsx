@@ -13,10 +13,10 @@ export function handleSubmit({ cardProps }: any, { errorProps }: any) {
     errorProps.setNumberError("Invalid number");
     isWrong = true;
   } else errorProps.setNumberError("");
-  if (card.cardDate == "") {
+  /*if (card.cardDate == "") {
     errorProps.setDateError("Can't be blank");
     isWrong = true;
-  } else errorProps.setDateError("");
+  } else errorProps.setDateError("");*/
   if (card.cardCVC.length < 3) {
     errorProps.setCVCError("Invalid CVC");
     isWrong = true;

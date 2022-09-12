@@ -3,7 +3,8 @@ import { SetStateAction } from "react";
 export interface ICard {
   cardName: string;
   cardNumber: string;
-  cardDate: string;
+  cardMonth: string;
+  cardYear: string;
   cardCVC: string;
 }
 

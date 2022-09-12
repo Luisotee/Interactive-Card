@@ -17,13 +17,15 @@ export function CardForm({ cardProps }: any) {
   const card = cardProps.cardFunction;
   const [nameError, setNameError] = useState("");
   const [numberError, setNumberError] = useState("");
-  const [dateError, setDateError] = useState("");
+  const [monthError, setMonthError] = useState("");
+  const [yearError, setYearError] = useState("");
   const [cvcError, setCVCError] = useState("");
 
   const errorProps = {
     setNameError: setNameError,
     setNumberError: setNumberError,
-    setDateError: setDateError,
+    setMonthError: setMonthError,
+    setYearError: setYearError,
     setCVCError: setCVCError,
   };
 
@@ -64,9 +66,9 @@ export function CardForm({ cardProps }: any) {
                 placeholder="MM"
                 component={InputMask}
                 mask="99"
-                onChange={card.setCardDate}
+                onChange={card.setCardMonth}
                 size="lg"
-                error={dateError}
+                error={monthError}
                 radius="md"
               />
             </Grid.Col>
@@ -76,9 +78,9 @@ export function CardForm({ cardProps }: any) {
                 placeholder="YY"
                 component={InputMask}
                 mask="99"
-                onChange={card.setCardDate}
+                onChange={card.setCardYear}
                 size="lg"
-                error={dateError}
+                error={yearError}
                 radius="md"
               />
             </Grid.Col>

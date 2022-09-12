@@ -1,4 +1,5 @@
-import { Image, SimpleGrid, Stack, Text } from "@mantine/core";
+import { Group, Image, SimpleGrid, Stack, Text } from "@mantine/core";
+import { useEffect } from "react";
 import { CardViewProps } from "../../interface";
 import {
   CardSmallLetters,
@@ -16,7 +17,11 @@ export function InnerFrontCard({ cardValue }: CardViewProps) {
             <Text style={{ whiteSpace: "nowrap" }}>
               {cardValue.cardName.toUpperCase()}
             </Text>
-            <Text>{cardValue.cardDate}</Text>
+            <Group spacing={0}>
+              <Text>{cardValue.cardMonth}</Text>
+              {cardValue.cardMonth != "" ? <Text>/</Text> : <></>}
+              <Text>{cardValue.cardYear}</Text>
+            </Group>
           </SimpleGrid>
         </CardSmallLetters>
       </CardTextPosition>

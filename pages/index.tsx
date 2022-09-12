@@ -14,20 +14,23 @@ const Home: NextPage = () => {
 
   const [cardName, setCardName] = useInputState("");
   const [cardNumber, setCardNumber] = useInputState("");
-  const [cardDate, setCardDate] = useInputState("");
+  const [cardMonth, setCardMonth] = useInputState("");
+  const [cardYear, setCardYear] = useInputState("");
   const [cardCVC, setCardCVC] = useInputState("");
 
   const cardFunction = {
     setCardName: setCardName,
     setCardNumber: setCardNumber,
-    setCardDate: setCardDate,
+    setCardMonth: setCardMonth,
+    setCardYear: setCardYear,
     setCardCVC: setCardCVC,
   };
 
   const cardValue = {
     cardName: cardName,
     cardNumber: cardNumber,
-    cardDate: cardDate,
+    cardMonth: cardMonth,
+    cardYear: cardYear,
     cardCVC: cardCVC,
   };
 
