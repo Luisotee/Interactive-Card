@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const [cardDate, setCardDate] = useInputState("");
   const [cardCVC, setCardCVC] = useInputState("");
 
-  const card = {
+  const cardFunction = {
     setCardName: setCardName,
     setCardNumber: setCardNumber,
     setCardDate: setCardDate,
@@ -25,6 +25,11 @@ const Home: NextPage = () => {
     cardCVC: cardCVC,
   };
 
+  const cardProps = {
+    cardFunction: cardFunction,
+    cardValue: cardValue,
+  };
+
   return (
     <>
       <Grid style={{ maxWidth: "100%", maxHeight: "100vh" }}>
@@ -36,7 +41,7 @@ const Home: NextPage = () => {
             position="center"
             style={{ marginTop: "30vh", marginLeft: "10vw" }}
           >
-            <CardForm card={card} />
+            <CardForm cardProps={cardProps} />
           </Group>
         </Grid.Col>
       </Grid>
