@@ -31,7 +31,7 @@ const Home: NextPage = () => {
     cardCVC: cardCVC,
   };
 
-  const cardFormProps = {
+  const cardProps = {
     cardFunction: cardFunction,
     cardValue: cardValue,
     isSent: isSent,
@@ -50,13 +50,9 @@ const Home: NextPage = () => {
             style={{ marginTop: "30vh", marginLeft: "10vw" }}
           >
             {isSent ? (
-              <ThankYou setSent={setSent} />
+              <ThankYou cardProps={cardProps} />
             ) : (
-              <CardForm
-                cardProps={cardFormProps}
-                isSent={isSent}
-                setSent={setSent}
-              />
+              <CardForm cardProps={cardProps} />
             )}
           </Group>
         </Grid.Col>

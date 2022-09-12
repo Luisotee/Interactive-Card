@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button, Image, Stack, Title } from "@mantine/core";
 import { setSentProps } from "../../interface";
+import { handleSent } from "./handle-sent";
 
-export function ThankYou({ setSent }: setSentProps) {
+export function ThankYou({ cardProps }: any) {
   return (
     <Stack align="center">
       <Image src="icon-complete.svg" alt="complete icon" width={80} />
@@ -15,7 +16,7 @@ export function ThankYou({ setSent }: setSentProps) {
         radius="md"
         size="lg"
         style={{ backgroundColor: "hsl(278, 68%, 11%)" }}
-        onClick={() => setSent(false)}
+        onClick={() => handleSent({ cardProps })}
         fullWidth
       >
         Confirm
