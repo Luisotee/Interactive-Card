@@ -1,18 +1,12 @@
-import {
-  Button,
-  Group,
-  Input,
-  SimpleGrid,
-  Stack,
-  TextInput,
-} from "@mantine/core";
+import { Button, Group, SimpleGrid, Stack, TextInput } from "@mantine/core";
 import { useInputState } from "@mantine/hooks";
 import { useState } from "react";
+import { setSentProps } from "../../interface";
 import { handleSubmit } from "./handle-submit";
 
 const InputMask = require("react-input-mask");
 
-export function CardForm({ cardProps }) {
+export function CardForm({ cardProps }: any) {
   const card = cardProps.cardFunction;
   const [nameError, setNameError] = useState("");
   const [numberError, setNumberError] = useState("");
