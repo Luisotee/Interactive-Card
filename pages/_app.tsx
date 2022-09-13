@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { Global, MantineProvider } from "@mantine/core";
 import Head from "next/head";
 import "@fontsource/space-grotesk";
+import { BackgroundGradient } from "../components/page-wrapper/background-gradient";
+import { PageWrapper } from "../components/page-wrapper/page-wrapper";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -25,7 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         withGlobalStyles
         withNormalizeCSS
       >
-        <Component {...pageProps} />
+        <PageWrapper>
+          <Component {...pageProps} />
+        </PageWrapper>
       </MantineProvider>
     </>
   );

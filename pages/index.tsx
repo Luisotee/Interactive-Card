@@ -1,14 +1,10 @@
-import { Grid, Group, Text, Title } from "@mantine/core";
+import { Group, SimpleGrid } from "@mantine/core";
 import { useInputState } from "@mantine/hooks";
-import type { NextPage } from "next";
-import { stringify } from "querystring";
-import { useState } from "react";
+import { NextPage } from "next";
+import React, { useState } from "react";
 import { CardForm } from "../components/card-form/card-form";
 import { Cards } from "../components/card-layout/cards";
-import React from "react";
-import { ThankYou } from "../components/thank-you/thank-you";
-import { IndexGrid } from "../components/index-grid";
-import { IndexGroup } from "../styles/css-components";
+
 React.useLayoutEffect = React.useEffect;
 
 const Home: NextPage = () => {
@@ -45,20 +41,14 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <IndexGrid>
-        <Grid.Col span={5}>
+      <SimpleGrid cols={2}>
+        <Group>
           <Cards cardValue={cardValue} />
-        </Grid.Col>
-        <Grid.Col span={5}>
-          <IndexGroup>
-            {isSent ? (
-              <ThankYou cardProps={cardProps} />
-            ) : (
-              <CardForm cardProps={cardProps} />
-            )}
-          </IndexGroup>
-        </Grid.Col>
-      </IndexGrid>
+        </Group>
+        <Group>
+          <CardForm cardProps={cardProps} />
+        </Group>
+      </SimpleGrid>
     </>
   );
 };

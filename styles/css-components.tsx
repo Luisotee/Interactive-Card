@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
-import { Group } from "@mantine/core";
+import { Group, Stack } from "@mantine/core";
 
 export const CardPosition = styled.div`
-  position: absolute;
-  bottom: 50vh;
-  right: 60vw;
-  height: 245px;
-  width: 447px;
+  position: relative;
+  margin-left: 50%;
+  margin-top: 50%;
+  height: 530px;
+  width: 540px;
+
   @media (max-width: 1023px) {
     top: 0;
     left: 0;
@@ -26,18 +27,11 @@ export const CardTextPosition = styled.div`
   top: 190px;
   align-items: center;
 `;
-export const CenteredContainer = styled.div`
-  position: absolute;
-  offset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  border: 1px solid green;
-`;
 
-export const FormGroup = styled(Group)`
+export const StackForm = styled(Stack)`
+  margin-top: 18vh;
+  width: 100%;
   @media (max-width: 1023px) {
-    margin-left: 0px;
   }
 `;
 
