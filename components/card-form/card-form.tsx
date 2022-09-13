@@ -66,6 +66,7 @@ export function CardForm({ cardProps }: any) {
                 placeholder="MM"
                 component={InputMask}
                 mask="99"
+                maskPlaceholder={null}
                 onChange={card.setCardMonth}
                 size="lg"
                 error={monthError}
@@ -78,6 +79,7 @@ export function CardForm({ cardProps }: any) {
                 placeholder="YY"
                 component={InputMask}
                 mask="99"
+                maskPlaceholder={null}
                 onChange={card.setCardYear}
                 size="lg"
                 error={yearError}

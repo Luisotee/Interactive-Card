@@ -3,7 +3,8 @@ export function handleSent({ cardProps }: any) {
 
   card.setCardName("");
   card.setCardNumber("");
-  card.setCardDate("");
+  card.setCardYear("");
+  card.setCardMonth("");
   card.setCardCVC("");
 
   cardProps.setSent(false);
