@@ -7,6 +7,8 @@ import { CardForm } from "../components/card-form/card-form";
 import { Cards } from "../components/card-layout/cards";
 import React from "react";
 import { ThankYou } from "../components/thank-you/thank-you";
+import { IndexGrid } from "../components/index-grid";
+import { IndexGroup } from "../styles/css-components";
 React.useLayoutEffect = React.useEffect;
 
 const Home: NextPage = () => {
@@ -43,23 +45,20 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Grid style={{ maxWidth: "100%", maxHeight: "100vh" }}>
+      <IndexGrid>
         <Grid.Col span={5}>
           <Cards cardValue={cardValue} />
         </Grid.Col>
         <Grid.Col span={5}>
-          <Group
-            position="center"
-            style={{ marginTop: "30vh", marginLeft: "10vw" }}
-          >
+          <IndexGroup>
             {isSent ? (
               <ThankYou cardProps={cardProps} />
             ) : (
               <CardForm cardProps={cardProps} />
             )}
-          </Group>
+          </IndexGroup>
         </Grid.Col>
-      </Grid>
+      </IndexGrid>
     </>
   );
 };

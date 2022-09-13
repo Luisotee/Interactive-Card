@@ -20,10 +20,18 @@ export const FrontCard = styled.div<IBackgroundProps>`
   padding: 1.5rem;
 
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   color: white;
   font-weight: 500;
   font-size: 1.95rem;
   letter-spacing: 0.125rem;
+
+  @media (max-width: 1023px) {
+    width: 287px;
+    height: 158px;
+    padding: 1rem;
+    top: 120px;
+    margin-left: 10%;
+  }
 `;

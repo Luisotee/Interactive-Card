@@ -9,6 +9,7 @@ import {
   TextInput,
 } from "@mantine/core";
 import { useState } from "react";
+import { FormGroup } from "../../styles/css-components";
 import { handleSubmit } from "./handle-submit";
 
 const InputMask = require("react-input-mask");
@@ -30,7 +31,7 @@ export function CardForm({ cardProps }: any) {
   };
 
   return (
-    <Group spacing="xl">
+    <FormGroup spacing="xl">
       <Input.Label className="inputLabels">
         CARDHOLDER NAME
         <TextInput
@@ -111,6 +112,6 @@ export function CardForm({ cardProps }: any) {
       >
         Confirm
       </Button>
-    </Group>
+    </FormGroup>
   );
 }
