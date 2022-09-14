@@ -5,7 +5,7 @@ import { CardSmallLetters, CVCText } from "../../styles/css-components";
 export function InnerBackCard({ cardValue }: CardViewProps) {
   return (
     <CardSmallLetters>
-      <CVCText>{cardValue.cardCVC}</CVCText>
+      <Text className="CVCText">{cardValue.cardCVC}</Text>
     </CardSmallLetters>
   );
 }

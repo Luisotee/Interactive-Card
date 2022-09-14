@@ -19,7 +19,7 @@ import { handleSubmit } from "./handle-submit";
 
 const InputMask = require("react-input-mask");
 
-export function CardForm({ cardProps }: any) {
+export function CardForm({ cardProps }) {
   const card = cardProps.cardFunction;
   const [nameError, setNameError] = useState("");
   const [numberError, setNumberError] = useState("");
@@ -71,7 +71,7 @@ export function CardForm({ cardProps }: any) {
                 <TextInput
                   className="inputDate"
                   placeholder="MM"
-                  component={InputMask}
+                  as={InputMask}
                   mask="99"
                   maskPlaceholder={null}
                   onChange={card.setCardMonth}
@@ -84,7 +84,7 @@ export function CardForm({ cardProps }: any) {
                 <TextInput
                   className="inputDate"
                   placeholder="YY"
-                  component={InputMask}
+                  as={InputMask}
                   mask="99"
                   maskPlaceholder={null}
                   onChange={card.setCardYear}
