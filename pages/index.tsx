@@ -42,12 +42,8 @@ const Home: NextPage = () => {
   return (
     <>
       <SimpleGrid cols={2}>
-        <Group>
-          <Cards cardValue={cardValue} />
-        </Group>
-        <Group>
-          <CardForm cardProps={cardProps} />
-        </Group>
+        <Cards cardValue={cardValue} />
+        <CardForm cardProps={cardProps} />
       </SimpleGrid>
     </>
   );

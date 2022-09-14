@@ -3,8 +3,7 @@ import { Group, Stack } from "@mantine/core";
 
 export const CardPosition = styled.div`
   position: relative;
-  margin-left: 50%;
-  margin-top: 50%;
+
   height: 530px;
   width: 540px;
 
@@ -32,16 +31,5 @@ export const StackForm = styled(Stack)`
   margin-top: 18vh;
   width: 100%;
   @media (max-width: 1023px) {
-  }
-`;
-
-export const IndexGroup = styled(Group)`
-  margin-top: 30vh;
-  margin-left: 10vw;
-  @media (max-width: 1023px) {
-    margin-top: 0vh;
-    margin-left: 0px;
-    margin-top: 300px;
-    width: 345px;
   }
 `;

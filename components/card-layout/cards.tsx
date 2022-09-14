@@ -9,7 +9,7 @@ import { InnerFrontCard } from "./inner-front-card";
 
 export function Cards({ cardValue }: CardViewProps) {
   return (
-    <Group>
+    <Group style={{ width: "100%", height: "100vh" }} position="center">
       <CardPosition>
         <FrontCard src="bg-card-front.png">
           <InnerFrontCard cardValue={cardValue} />
