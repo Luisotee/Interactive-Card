@@ -4,6 +4,6 @@ export const CenteredContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100vh;
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
   }
 `;

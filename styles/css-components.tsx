@@ -2,14 +2,14 @@ import styled from "@emotion/styled";
 import { Group, SimpleGrid, Stack, Text } from "@mantine/core";
 
 export const StackForm = styled(Stack)`
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
   }
 `;
 
 export const FullSizeGroup = styled(Group)`
   height: 100vh;
   width: 100%;
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     width: auto;
     margin: 0 auto;
     height: 287px;
@@ -19,7 +19,7 @@ export const FullSizeGroup = styled(Group)`
 export const FullSizeGroupForm = styled(Group)`
   height: 100vh;
   width: 100%;
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     width: auto;
     margin: 0 auto;
     height: 352px;
@@ -31,7 +31,7 @@ export const CardPosition = styled.div`
   height: 530px;
   width: 540px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     position: absolute;
     height: 248px;
     left: 0;
@@ -56,7 +56,7 @@ export const CardTextPosition = styled.div`
   width: 90%;
   top: 190px;
   align-items: center;
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     top: 120px;
   }
 `;
@@ -66,7 +66,7 @@ export const CVCText = styled(Text)`
   right: 3.5rem;
   top: 6.7rem;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     right: 2rem;
     top: 4.2rem;
   }

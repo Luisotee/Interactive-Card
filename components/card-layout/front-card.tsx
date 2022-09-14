@@ -27,7 +27,7 @@ export const FrontCard = styled.div<IBackgroundProps>`
   font-size: 1.95rem;
   letter-spacing: 0.125rem;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     width: 287px;
     height: 158px;
     padding: 1rem;

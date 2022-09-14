@@ -12,7 +12,7 @@ export const BackgroundGradient = styled.div<IBackgroundProps>`
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     background-image: url(${(props) => props.mobileSrc});
     width: 100%;
     height: 240px;

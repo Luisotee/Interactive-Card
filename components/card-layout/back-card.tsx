@@ -25,7 +25,7 @@ export const BackCard = styled.div<IBackgroundProps>`
   top: 283px;
   left: 93px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1080px) {
     top: 8%;
     width: 287px;
     height: 158px;
