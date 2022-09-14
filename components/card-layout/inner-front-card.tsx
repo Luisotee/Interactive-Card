@@ -1,4 +1,4 @@
-import { Group, Image, SimpleGrid, Stack, Text } from "@mantine/core";
+import { Grid, Group, Image, SimpleGrid, Stack, Text } from "@mantine/core";
 import { useEffect } from "react";
 import { CardViewProps } from "../../interface";
 import {
@@ -8,21 +8,36 @@ import {
 
 export function InnerFrontCard({ cardValue }: CardViewProps) {
   return (
-    <Stack>
-      <Image src="card-logo.svg" alt="card logo" width={80} />
-      <Text mt={38}>{cardValue.cardNumber}</Text>
+    <Stack style={{ width: "100%" }}>
+      <Image
+        src="card-logo.svg"
+        alt="card logo"
+        width={80}
+        style={{ marginBottom: "10px" }}
+      />
+      <Text>{cardValue.cardNumber}</Text>
       <CardTextPosition>
         <CardSmallLetters>
-          <SimpleGrid cols={2} spacing={300} mb="lg">
-            <Text style={{ whiteSpace: "nowrap" }}>
-              {cardValue.cardName.toUpperCase()}
-            </Text>
-            <Group spacing={0}>
-              <Text>{cardValue.cardMonth}</Text>
-              {cardValue.cardMonth != "" ? <Text>/</Text> : <></>}
-              <Text>{cardValue.cardYear}</Text>
-            </Group>
-          </SimpleGrid>
+          <Grid>
+            <Grid.Col span={9}>
+              <Text
+                style={{
+                  whiteSpace: "nowrap",
+                  overflowX: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {cardValue.cardName.toUpperCase()}
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={3}>
+              <Group spacing={0} position="right">
+                <Text>{cardValue.cardMonth}</Text>
+                {cardValue.cardMonth != "" ? <Text>/</Text> : <></>}
+                <Text>{cardValue.cardYear}</Text>
+              </Group>
+            </Grid.Col>
+          </Grid>
         </CardSmallLetters>
       </CardTextPosition>
     </Stack>

@@ -1,5 +1,5 @@
-import { Group, SimpleGrid } from "@mantine/core";
-import { useInputState } from "@mantine/hooks";
+import { Group, SimpleGrid, Stack } from "@mantine/core";
+import { useInputState, useMediaQuery } from "@mantine/hooks";
 import { NextPage } from "next";
 import React, { useState } from "react";
 import { CardForm } from "../components/card-form/card-form";
@@ -9,6 +9,8 @@ import { ThankYou } from "../components/thank-you/thank-you";
 React.useLayoutEffect = React.useEffect;
 
 const Home: NextPage = () => {
+  const isMobile = useMediaQuery("(min-width: 1080px)");
+
   const [isSent, setSent] = useState(false);
 
   const [cardName, setCardName] = useInputState("");
@@ -42,14 +44,25 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <SimpleGrid cols={2}>
-        <Cards cardValue={cardValue} />
-        {isSent ? (
-          <ThankYou cardProps={cardProps} />
-        ) : (
-          <CardForm cardProps={cardProps} />
-        )}
-      </SimpleGrid>
+      {isMobile ? (
+        <SimpleGrid cols={2}>
+          <Cards cardValue={cardValue} />
+          {isSent ? (
+            <ThankYou cardProps={cardProps} />
+          ) : (
+            <CardForm cardProps={cardProps} />
+          )}
+        </SimpleGrid>
+      ) : (
+        <Stack style={{ width: "auto" }}>
+          <Cards cardValue={cardValue} />
+          {isSent ? (
+            <ThankYou cardProps={cardProps} />
+          ) : (
+            <CardForm cardProps={cardProps} />
+          )}
+        </Stack>
+      )}
     </>
   );
 };

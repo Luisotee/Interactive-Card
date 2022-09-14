@@ -9,7 +9,11 @@ import {
   TextInput,
 } from "@mantine/core";
 import { useState } from "react";
-import { CenteredGroup, StackForm } from "../../styles/css-components";
+import {
+  FullSizeGroup,
+  FullSizeGroupForm,
+  StackForm,
+} from "../../styles/css-components";
 
 import { handleSubmit } from "./handle-submit";
 
@@ -32,7 +36,7 @@ export function CardForm({ cardProps }: any) {
   };
 
   return (
-    <CenteredGroup>
+    <FullSizeGroupForm>
       <StackForm spacing="xl">
         <Input.Label className="inputLabels">
           CARDHOLDER NAME
@@ -115,6 +119,6 @@ export function CardForm({ cardProps }: any) {
           Confirm
         </Button>
       </StackForm>
-    </CenteredGroup>
+    </FullSizeGroupForm>
   );
 }

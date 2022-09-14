@@ -31,7 +31,8 @@ export const FrontCard = styled.div<IBackgroundProps>`
     width: 287px;
     height: 158px;
     padding: 1rem;
-    top: 120px;
-    margin-left: 10%;
+    top: 42%;
+    margin-left: 0;
+    font-size: 1.2rem;
   }
 `;

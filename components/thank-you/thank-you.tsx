@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button, Image, Stack, Title } from "@mantine/core";
 import { setSentProps } from "../../interface";
-import { CenteredGroup } from "../../styles/css-components";
+import { FullSizeGroup } from "../../styles/css-components";
 import { handleSent } from "./handle-sent";
 
 export function ThankYou({ cardProps }: any) {
   return (
-    <CenteredGroup>
+    <FullSizeGroup>
       <Stack align="center">
         <Image src="icon-complete.svg" alt="complete icon" width={80} />
         <Title order={1}>Thank You!</Title>
@@ -24,6 +24,6 @@ export function ThankYou({ cardProps }: any) {
           Confirm
         </Button>
       </Stack>
-    </CenteredGroup>
+    </FullSizeGroup>
   );
 }
