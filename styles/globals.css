@@ -29,9 +29,9 @@ body {
   right: 3.5rem;
   top: 6.7rem;
 
-  @media only screen and (max-width: 600px) {
-    right: 2rem;
-    top: 4.2rem;
   }
 
-  }
+.CVCTextMobile {
+  margin-right: 1.4rem;
+  margin-top: 3.2rem;
+}
