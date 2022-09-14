@@ -28,7 +28,12 @@ export const CardTextPosition = styled.div`
 `;
 
 export const StackForm = styled(Stack)`
-  margin-top: 18vh;
+  @media (max-width: 1023px) {
+  }
+`;
+
+export const CenteredGroup = styled(Group)`
+  height: 100vh;
   width: 100%;
   @media (max-width: 1023px) {
   }

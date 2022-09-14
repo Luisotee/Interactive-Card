@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import React, { useState } from "react";
 import { CardForm } from "../components/card-form/card-form";
 import { Cards } from "../components/card-layout/cards";
+import { ThankYou } from "../components/thank-you/thank-you";
 
 React.useLayoutEffect = React.useEffect;
 
@@ -43,7 +44,11 @@ const Home: NextPage = () => {
     <>
       <SimpleGrid cols={2}>
         <Cards cardValue={cardValue} />
-        <CardForm cardProps={cardProps} />
+        {isSent ? (
+          <ThankYou cardProps={cardProps} />
+        ) : (
+          <CardForm cardProps={cardProps} />
+        )}
       </SimpleGrid>
     </>
   );
