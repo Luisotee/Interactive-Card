@@ -2,7 +2,7 @@
 
 Due to some problems in mantine that wouldn't let me build the app, I had to drop some functionalities in the vercel version. The original version with all functionalities can be found in the main branch but can only be used in the development environment with the ```yarn dev``` command.
 
-I do not plan on fixing this as the program was built with a goal on learning how to use react and mantine, and not troubleshooting deep problems inside the framework. 
+I do not plan on fixing this as the program was built with a goal on learning how to use react and mantine, and not troubleshooting deep problems inside the mantine framework. 
 
 # Frontend Mentor - Interactive card details form
 
